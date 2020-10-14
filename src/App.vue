@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import TodoHeader form './components/TodoHeader.vue'
-import TodoInput form './components/TodoInput.vue'
-import TodoList form './components/TodoList.vue'
-import TodoFooter form './components/TodoFooter.vue'
+import TodoHeader from './components/TodoHeader.vue'
+import TodoInput from './components/TodoInput.vue'
+import TodoList from './components/TodoList.vue'
+import TodoFooter from './components/TodoFooter.vue'
 
 export default {
   components: {
