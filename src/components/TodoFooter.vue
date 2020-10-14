@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
-  </div>
+    <div>footer</div>
 </template>
 
 <script>
 export default {
+
 }
 </script>
 
