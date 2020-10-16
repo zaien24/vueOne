@@ -27,8 +27,10 @@ export default {
         }
     },
     methods: {
-        removeTodo() {
-            console.log("todoItem, index");
+        removeTodo(todoItem, index) {
+            //console.log("todoItem, index");
+            localStorage.removeItem(todoItem);
+            this.todoItems.splice(index, 1);
         }
     }
 }
