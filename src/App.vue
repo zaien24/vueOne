@@ -26,7 +26,7 @@ export default {
             }
         }
   },
-  method: {
+  methods: {
     clearAll() {
       localStorage.clear();
       this.todoItems = [];
