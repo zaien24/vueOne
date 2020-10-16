@@ -31,7 +31,7 @@ export default {
       localStorage.clear();
       this.todoItems = [];
     },
-    addTodo() {
+    addTodo(todoItem) {
       // 로컬 스토리지에 데이터를 추가하는 로직
       localStorage.setItem(todoItem, todoItem);
       this.todoItems.push(todoItem);
