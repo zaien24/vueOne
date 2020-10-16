@@ -1,6 +1,6 @@
 <template>
     <section>
-        <ul>
+        <transition-group name="list" tag="ul">
             <li v-for="(todoItem , index) in propsdata" class="shadow">
                 <i class="checkBtn fas fa-check" aria-hidden="true"></i>
                 {{todoItem}}
@@ -8,30 +8,20 @@
                     <i class="far fa-trash-alt" aria-hidden="true"></i>
                 </span>
             </li>
-        </ul>
+        </transition-group>
     </section>
 </template>
 
 <script>
 export default {
     props: ['propsdata'],
-    data() {
-        return {
-            todoItems: []
-        }
-    },
-    created() {
-        if(localStorage.length > 0) {
-            for (var i = 0; i < localStorage.length; i++) {
-                this.todoItems.push(localStorage.key(i));
-            }
-        }
-    },
+    
     methods: {
         removeTodo(todoItem, index) {
             //console.log("todoItem, index");
-            localStorage.removeItem(todoItem);
-            this.todoItems.splice(index, 1);
+          //  localStorage.removeItem(todoItem);
+           // this.todoItems.splice(index, 1);
+           this.$emit('removeTodo', todoItem, index);
         }
     }
 }
